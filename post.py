@@ -57,7 +57,12 @@ data = {
     }
 
 r = requests.post(URL, data=data, auth=auth)
-media_id = r.json()['media_id']
+check(r)
+
+if 'media_id' in r.json():
+    media_id = r.json()['media_id']
+else:
+    raise Exception('Media id not found. Response ', r.json())
 
 # APPEND
 
