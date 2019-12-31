@@ -3,3 +3,4 @@ matplotlib
 scikit-image
 Pillow
 pyyaml
+requests
