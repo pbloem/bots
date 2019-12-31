@@ -4,3 +4,4 @@ scikit-image
 Pillow
 pyyaml
 requests
+requests_oauthlib
