@@ -25,7 +25,7 @@ print('seed', SEED)
 random.seed(SEED)
 
 # total runtime in seconds
-TOTALTIME = 60 * 60
+TOTALTIME = 3 * 60
 # Safety margin for producing output in seconds
 MARGIN = 10
 
