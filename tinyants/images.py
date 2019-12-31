@@ -13,8 +13,6 @@ from matplotlib import cm, colors
 
 from skimage.io import imsave
 
-from tqdm import trange
-
 from PIL import Image
 
 from collections import deque
