@@ -14,7 +14,15 @@ def check(r):
 
 
 # Creds for @ants_tiny
-creds = yaml.load(open('auth.yaml', 'r'))
+if os.path.exists('auth.yaml'):
+    creds = yaml.load(open('auth.yaml', 'r'))
+else:
+    creds = {
+        'app_key' : os.environ['APPKEY'],
+        'app_secret' : os.environ['APPSECRET'],
+        'user_key' : os.environ['USERKEY'],
+        'user_secret' : os.environ['USERSECRET']
+    }
 
 auth = OAuth1(
     creds['app_key'], # app key
