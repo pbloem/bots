@@ -1,6 +1,5 @@
 numpy
 matplotlib
-skimage
-tqdm
+scikit-image
 Pillow
 pyyaml
