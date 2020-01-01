@@ -40,13 +40,13 @@ MAPSIZE = random.choice([[135, 240], [270, 480]]) if GIF else \
           random.choice([[540, 960], [720, 1280], [1080, 1920]])
 print('map size', MAPSIZE)
 
-NUM_AGENTS = random.choice([1, 2, 3, 4, 5, 7, 10, 100])
+NUM_AGENTS = 1 if MAPSIZE[0] == 1080 else random.choice([1, 2, 3, 4, 5, 7, 10, 100])
 print('num agents', NUM_AGENTS)
 
 PLOT_EVERY = 1_000
 PLOT_THESE = [0, 10, 100, 200, 300, 500]
 
-MOVES = random.choice(['four', 'diag', 'eight', 'circ'])
+MOVES = 'four' if MAPSIZE[0] == 1080 else random.choice(['four', 'diag', 'eight', 'circ'])
 print('moves', MOVES)
 
 MOVES_FOUR = [(0, 1), (1, 0), (0, -1), (-1, 0)]
