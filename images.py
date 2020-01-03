@@ -60,7 +60,7 @@ def go(arg):
     MOVES_DIAG = [(0, 1), (0, -1)] + DIAG
 
     CIRC_DIAM = 10.0
-    CIRC_MOVES = 120
+    CIRC_MOVES = 24
     MOVES_CIRC = [(int(CIRC_DIAM * cos(r)), int(CIRC_DIAM * sin(r))) for r in np.linspace(0.0, 2*math.pi, CIRC_MOVES)]
 
     IMPROVEMENT =  10.0 ** (u(0.0, 1.0)) if MAPSIZE[0] > 500 else 10.0 ** (u(-1.5, 1.0))
