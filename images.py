@@ -63,7 +63,7 @@ def go(arg):
     CIRC_MOVES = 120
     MOVES_CIRC = [(int(CIRC_DIAM * cos(r)), int(CIRC_DIAM * sin(r))) for r in np.linspace(0.0, 2*math.pi, CIRC_MOVES)]
 
-    IMPROVEMENT = 10.0 ** (u(-1.5, 1.0))
+    IMPROVEMENT =  10.0 ** (u(0.0, 1.0)) if MAPSIZE[0] > 500 else 10.0 ** (u(-1.5, 1.0))
     IMPROVEMENT_VAR = random.choice(['perant', None, u(0.0, 5.0)])
     IMPROVEMENT_REPS = random.choice([1, 2, 3, 10, 25])
 
@@ -316,7 +316,7 @@ def go(arg):
     else:
         raise Exception(f'INIT {INIT} not recognized.')
 
-    map += np.random.rand(*MAPSIZE) * INIT_NOISE * 0.25
+    map += np.random.rand(*MAPSIZE) * INIT_NOISE * 0.1
 
 
     if INIT_INVERT:
